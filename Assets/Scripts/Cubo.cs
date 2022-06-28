@@ -14,7 +14,7 @@ public class Cubo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
+     Instrucciones();
     }
 
     // Update is called once per frame
@@ -38,6 +38,8 @@ public class Cubo : MonoBehaviour
         
         if(Input.GetKeyDown(KeyCode.A))
         Direccion();
+
+        
         
     }
 
@@ -77,4 +79,15 @@ public class Cubo : MonoBehaviour
         transform.position += new Vector3(-3,0,0);
     }
 
+    void Instrucciones ()
+    {
+        Debug.Log ("Presiona E para aumentar tu vida en 10");
+        Debug.Log ("Presiona R para reducir tu vida en 25");
+        Debug.Log ("Presiona D para moverte en 1 hacia la derecha");
+        Debug.Log ("Presiona A para moverte en 3 hacia la izquierda");
+        Debug.Log ("Presiona Q para moverte en 5 hacia la derecha");
+        Debug.Log ("en caso de superar los 150 de vida entras en modo invencible el cubo se vuelve azul");
+    }
+
+    
 }
